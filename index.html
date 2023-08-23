@@ -22,12 +22,30 @@
   </header>
   <main class="main-container">
     <section class="gallery">
+      <div class="gallery-container">
       <!-- <img onclick="onSelectImg(this)" src="meme-imgs/1.jpg" />
       <img onclick="onSelectImg(this)" src="meme-imgs/2.jpg" />
       <img onclick="onSelectImg(this)" src="meme-imgs/3.jpg" /> -->
+    </div>
     </section>
   
     <section class="editor">
+      <div class="tools">
+
+        <input type="text" class="TextInput"  placeholder="write something on the pic..." oninput="onInputValue(this.value)">
+        <button class="btn btn-font-size-up" onclick="onFontUp()"><i class="fa-solid fa-a" style="color: #000000;"></i>+</button>
+        <button class="btn btn-font-size-down" onclick="onFontDown()"><i class="fa-solid fa-a" style="color: #000000;"></i>-</button>
+        <button class btn btn-font-left><i class="fa-solid fa-align-left" style="color: #000000;"></i></button>
+        <button class="btn btn-font-center"><i class="fa-solid fa-align-center" style="color: #000000;"></i></button>
+        <button class="btn btn-font-right"><i class="fa-solid fa-align-right" style="color: #000000;"></i></button>
+        <button class="btn btn-color" onchange="onFillColor(this.value)"><i class="fa-solid fa-palette" style="color: #000000;"><input type="color" name="fill-color" id="" onchange="onFillColor(this.value)"></i></button>
+        <button class="btn btn-stroke"><i class="fa-solid fa-s" style="color: #000000;"></i></button>
+        <select name="" id="" class="select-font">
+          <option value="Impact">Impact</option>
+          <option value="Arial">Arial</option>
+
+      </select>
+      </div>
       <div class="canvas-container">
         <canvas width="400" height="400"></canvas>
       </div>
@@ -36,10 +54,11 @@
 
 
 
+  <script src="https://kit.fontawesome.com/09e52b698b.js" crossorigin="anonymous"></script>
   <script src="JS/services/storage.service.js"></script>
   <script src="JS/util.service.js"></script>
-  <script src="JS/services/meme.service.js"></script>
   <script src="JS/services/gallery.service.js"></script>
+  <script src="JS/services/meme.service.js"></script>
   <script src="JS/gallery.controller.js"></script>
   <script src="JS/meme.controller.js"></script>
 </body>

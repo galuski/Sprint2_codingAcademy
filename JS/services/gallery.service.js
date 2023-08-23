@@ -22,16 +22,7 @@ var gImgs = [
   { id: gIdx, url: 'meme-imgs/${gIdx++}.jpg', keywords: [] },
 ]
 
-var gMeme = {
-  selectedImgId: 5,
-  selectedLineIdx: 0,
-  lines: [
-      {
-          txt: 'Write something funny',
-          size: 30,
-          color: 'white'
-      }
-  ]
+function getImg() {
+  const img = gImgs.find(img => img.id === gMeme.selectedImgId)
+  return img
 }
-
-var gKeywordSearchCountMap = { 'funny': 12, 'cat': 16, 'baby': 2 }
