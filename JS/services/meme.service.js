@@ -29,6 +29,9 @@ function setFontSizeDown() {
   gMeme.lines[gMeme.selectedLineIdx].size -= 5
 }
 
-function setTxtColor(colorValue) {
-  gMeme.lines[gMeme.selectedLineIdx].color = colorValue
+function setFillColor(fillValue) {
+  gMeme.lines[gMeme.selectedLineIdx].color = fillValue
+}
+function setTxtStrokeColor(strokeValue) {
+  gMeme.lines[gMeme.selectedLineIdx].stroke = strokeValue
 }

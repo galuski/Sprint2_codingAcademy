@@ -26,3 +26,15 @@ function getImg() {
   const img = gImgs.find(img => img.id === gMeme.selectedImgId)
   return img
 }
+
+function updateImg(imgId) {
+  gMeme.selectedImgId = imgId
+}
+
+function getImages() {
+  return gImgs
+}
+
+function updateMemeImg(imgId) {
+  gMeme.selectedImgId = imgId
+}
