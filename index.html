@@ -24,30 +24,42 @@
 
   <main class="main-container">
     <section class="gallery-page">
+      <h1>Choose an image:</h1>
+      <div class="gallery-container">
       <!-- <img onclick="onSelectImg(this)" src="meme-imgs/1.jpg" />
       <img onclick="onSelectImg(this)" src="meme-imgs/2.jpg" />
       <img onclick="onSelectImg(this)" src="meme-imgs/3.jpg" /> -->
+    </div>
     </section>
   
     <section class="editor-page">
 
       <div class="tools">
+        <button class="btn btn-switch-line" onclick="onSwitchLine()">⇅</button>
+        <button class="btn btn-add-line" onclick="onAddLine()">+</button>
+        <button onclick="onDeleteLine()" class="btn btn-delete-line">🗑</button>
 
-        <input type="text" class="TextInput" oninput="onInputValue(this.value)" placeholder="write something on the pic...">
-        <button class="btn btn-font-size-up" onclick="onFontUp()"><i class="fa-solid fa-a" style="color: #000000;"></i>+</button>
-        <button class="btn btn-font-size-down" onclick="onFontDown()"><i class="fa-solid fa-a" style="color: #000000;"></i>-</button>
-        <button class="btn btn-font-left" onclick="onFontLeft()"><i class="fa-solid fa-align-left" style="color: #000000;"></i></button>
+
+        <input type="text" class="txt'input" oninput="onInputValue(this.value)" placeholder="write something on the pic...">
+        <button class="btn btn-font-size-up" onclick="onFontUp()">A+</button>
+        <button class="btn btn-font-size-down" onclick="onFontDown()">A-</button>
+        <button class="btn btn-font-left" onclick="onFontRight()"><i class="fa-solid fa-align-left" style="color: #000000;"></i></button>
         <button class="btn btn-font-center" onclick="onFontCenter()"><i class="fa-solid fa-align-center" style="color: #000000;"></i></button>
-        <button class="btn btn-font-right" onclick="onFontRight()"><i class="fa-solid fa-align-right" style="color: #000000;"></i></button>
+        <button class="btn btn-font-right" onclick="onFontLeft()"><i class="fa-solid fa-align-right" style="color: #000000;"></i></button>
         <button class="btn btn-color-fill" oninput="onFillColor(this.value)"><i class="fa-solid fa-palette" style="color: #000000;"><input type="color" name="fill-color" id="" onchange="onFillColor(this.value)"></i></button>
-        <button class="btn btn-color-stroke" oninput="onStrokeColor(this.value)"><i class="fa-solid fa-s" style="color: #000000;"></i></button>
+        <button class="btn btn-color-stroke" oninput="onStrokeColor(this.value)"><i class="fa-solid fa-s" style="color: #000000;"><input type="color" name="stroke-color" id="" onchange="onStrokeColor(this.value)"></i></button>
         <button class="btn btn-share"><a href="#"></a><i class="fa-solid fa-share-nodes" style="color: #000000;"></i> Share</button>  
         <button class="btn btn-download"><a href="#" onclick="onDownloadCanvas(this)"></a><i class="fa-solid fa-download" style="color: #000000;"></i> Download</button> 
+       
         <select name="" id="" class="select-font" onchange="onStyleFont(this.value)">
           <option value="Impact">Impact</option>
           <option value="Arial">Arial</option>
-        
       </select>
+
+      
+      <input type="file" class="btn btn-file-input" name="image" onchange="onImgInput(event)" accept="image/*" />
+      <a href="#" class="btn" onclick="downloadImg(this)" download="my-img.jpg">Download as jpeg</a>
+      <button class="btn" onclick="onUploadImg()">Share on Facebook</button>
       </div>
       <div class="canvas-container">
         <canvas width="400" height="400"></canvas>
@@ -58,11 +70,13 @@
 
 
   <script src="https://kit.fontawesome.com/09e52b698b.js" crossorigin="anonymous"></script>
+  <script src="JS/util.service.js"></script>
   <script src="JS/services/storage.service.js"></script>
   <script src="JS/services/meme.service.js"></script>
   <script src="JS/services/gallery.service.js"></script>
-  <script src="JS/util.service.js"></script>
   <script src="JS/gallery.controller.js"></script>
   <script src="JS/meme.controller.js"></script>
+  <script src="JS/upload-from-local.js"></script>
+  <script src="JS/sharing-on-facebook.js"></script>
 </body>
 </html>
