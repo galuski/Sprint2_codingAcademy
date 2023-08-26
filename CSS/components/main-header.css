@@ -1,0 +1,21 @@
+.main-header {
+    height: 80px;
+    align-items: center;
+    padding: .5em 4em;
+}
+
+.main-header .logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--clrPrimary2);
+}
+
+.main-header a {
+    text-decoration: none;
+
+}
+
+.main-header a:hover {
+    color: var(--clrPrimary3);
+
+}

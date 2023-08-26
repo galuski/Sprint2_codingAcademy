@@ -1,17 +1,16 @@
-*{
-  box-sizing: border-box;
-}
+/* BASICS  */
+@import url("./basics/base.css");
+@import url("./basics/helpers.css");
 
-.canvas-container {
-  width: 80vw;
-  margin: 10px auto;
-  border: 1px solid black;
-}
+/* COMPONENTS */
+@import url("./components/main-header.css");
+@import url("./components/gallery-container.css");
+@import url("./components/meme-editor.css");
+@import url("./components/modal.css");
 
-body {
-  text-align: center;
-}
 
-.hidden {
-  display: none;
-}
+/* SETUP */
+@import url("./setup/vars.css");
+@import url("./setup/typography.css");
+/* MQ */
+@import url("./setup/mq.css");

@@ -19,7 +19,7 @@ function resetLines() {
       {
           pos: { x: center.x, y: center.y - 150 },
           txt: 'Say something here 1',
-          size: 20,
+          size: 30,
           color: 'white',
           align: 'center',
           font: 'Impact',
@@ -28,7 +28,7 @@ function resetLines() {
       {
           pos: { x: center.x, y: center.y + 150 },
           txt: 'Say something here 2',
-          size: 20,
+          size: 30,
           color: 'white',
           align: 'center',
           font: 'Impact',
@@ -85,7 +85,7 @@ function addLine() {
   let line = {
       pos: {},
       txt: 'Say something here 3',
-      size: 20,
+      size: 30,
       color: 'white',
       align: 'center',
       font: 'Impact'

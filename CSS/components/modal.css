@@ -1,0 +1,31 @@
+.modal-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    place-items: center;
+    justify-content: center;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+}
+
+.about-modal {
+    display: block;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--clrPrimary2);
+    color: var(--clrPrimary3);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.btn-modal-close{
+    font-family: eurofurence;
+    font-size: 25px;
+    background-color: var(--clrPrimary2);
+    color: var(--clrPrimary1);
+}
+
+.btn-modal-close:hover{
+    color: var(--clrPrimary3);
+}

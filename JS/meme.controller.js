@@ -18,6 +18,7 @@ function resizeCanvas() {
 
 function onUpdateImg(imgId) {
   setUpdateMemeImg(imgId)
+  setPassingPages()
   resetLines()
   renderMeme()
 
@@ -129,3 +130,12 @@ function downloadImg(elLink) {
   elLink.href = imgContent
 }
 
+function onOpenModal() {
+  var elModal = document.querySelector('.modal-container')
+  elModal.style.display = 'flex'
+}
+
+function onCloseModal() {
+  var elModal = document.querySelector('.modal-container')
+  elModal.style.display = 'none'
+}

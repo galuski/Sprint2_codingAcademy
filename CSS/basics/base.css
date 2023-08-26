@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+html{
+    font-family: eurofurence;
+}
+body {
+    margin: 0;
+    background-image: url("orange-bg.jpg");
+    background-attachment: fixed;
+}
+
+.hide {
+    display: none;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+canvas {
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: Sedgwick;
+}
+
+h3 {
+    text-align: center;
+}
