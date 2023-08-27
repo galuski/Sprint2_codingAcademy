@@ -25,7 +25,7 @@ function getGalleryImages() {
 function renderGalleryImages() {
   let elGallery = document.querySelector('.gallery-img')
   let imgs = getGalleryImages()
-  let strHTML = imgs.map(img => `<img src="${img.url}" alt="" class="image" onclick="onUpdateImg(${img.id})"/>` )
+  let strHTML = imgs.map(img => `<img src="${img.url}" alt="" class="image" onclick="onUpdateImg(${img.id})"/>`).join('')
     console.log(strHTML)
   elGallery.innerHTML = strHTML
 }
