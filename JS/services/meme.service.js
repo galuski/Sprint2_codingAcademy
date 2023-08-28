@@ -78,7 +78,7 @@ function switchLineIdx() {
   let currentLineIdx = gMeme.selectedLineIdx
   if (currentLineIdx < gMeme.lines.length - 1) gMeme.selectedLineIdx += 1
   else if (currentLineIdx === gMeme.lines.length - 1) gMeme.selectedLineIdx = 0
-
+  // drawFrame()
 }
 
 function addLine() {
@@ -100,3 +100,8 @@ function setDeleteLine() {
   gMeme.lines.splice(selectedLineIdx, 1)
 
 }
+
+function drawRect(x, y) {
+  gCtx.strokeRect(x, y-20, 370,40)
+}
+

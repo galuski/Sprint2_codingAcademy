@@ -1,5 +1,8 @@
 'use strict'
 
+function onInitGallery() {
+  renderGalleryImages()
+}
 
 function setPassingPages() {
   const elGalleryContainer = document.querySelector('.gallery-page')
@@ -14,10 +17,6 @@ function moveToGallery() {
   elCanvasContainer.classList.remove('hide')
 }
 
-function onInitGallery(){
-  renderGalleryImages()
-}
-
 function getGalleryImages() {
   return gImgs
 }
@@ -26,7 +25,6 @@ function renderGalleryImages() {
   let elGallery = document.querySelector('.gallery-img')
   let imgs = getGalleryImages()
   let strHTML = imgs.map(img => `<img src="${img.url}" alt="" class="image" onclick="onUpdateImg(${img.id})"/>`).join('')
-    console.log(strHTML)
   elGallery.innerHTML = strHTML
 }
 // function renderGalleryImages() {

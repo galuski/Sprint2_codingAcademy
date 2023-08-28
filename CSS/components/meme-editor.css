@@ -19,7 +19,7 @@
 .btn {
     border: none;
     background-color: white; 
-    color: black; 
+    color: rgb(0, 0, 0); 
     padding: 10px 10px;
     text-align: center;
     text-decoration: none;
@@ -28,6 +28,13 @@
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
+  }
+
+  .btn-download>a{
+    color: rgb(0, 0, 0);
+  }
+  .btn-download:hover>a{
+    color: rgb(255, 255, 255);
   }
 
   .btn-switch-line:hover{
@@ -59,8 +66,7 @@
   }
 
   input[type="color"] {
-    appearance: none;
-    -moz-appearance: none;
+
     -webkit-appearance: none;
     background: none;
     border: 0;

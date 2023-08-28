@@ -40,6 +40,9 @@ function renderMeme() {
 function renderAllLines() {
   gMeme.lines.forEach((line, lineIdx) => {
       let txt = line.txt
+      if (gMeme.selectedLineIdx===lineIdx){
+        drawRect( 10, line.pos.y)
+      }
       drawText(txt, line.pos.x, line.pos.y, lineIdx)
   })
 }
@@ -105,6 +108,7 @@ function onStyleFont(fontValue) {
 
 function onSwitchLine() {
   switchLineIdx()
+  renderMeme()
 }
 
 function onFontLeft() {
